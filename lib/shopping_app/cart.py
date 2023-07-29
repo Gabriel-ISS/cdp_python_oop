@@ -22,6 +22,7 @@ class Cart:
     def check_out(self):
         if self.owner.wallet.balance < self.total_amount():
             print("Lo siento, no puedes pagarlo")
+            return
         
         customer = self.owner
         for item in self.items:
